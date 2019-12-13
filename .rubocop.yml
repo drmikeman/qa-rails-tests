@@ -1,0 +1,76 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'db/schema.rb'
+  TargetRailsVersion: 4.2
+
+Rails:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/CollectionMethods:
+  Description: Preferred collection methods.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#map-find-select-reduce-size
+  Enabled: true
+  PreferredMethods:
+    collect: map
+    collect!: map!
+    detect: find
+    find_all: select
+    inject: reduce
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+  Enabled: true
+
+Layout:
+  EnforcedStyle: trailing
+  Enabled: true
+
+Style/NumericLiterals:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/LineLength:
+  Max: 120
+
+LineLength:
+  Max: 120
+
+Naming:
+  EnforcedStyle: snake_case
+
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+  SupportedStyles:
+    - comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+  SupportedStyles:
+    - comma
+
+TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+  SupportedStyles:
+    - comma
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
